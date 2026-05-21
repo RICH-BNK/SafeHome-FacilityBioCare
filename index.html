@@ -25,12 +25,13 @@
             margin: 0 auto;
             padding: 0 24px;
         }
+        /* CORRECTED: sticky navbar with backdrop blur */
         .navbar {
             background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(12px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
             border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-            position: static;
+            position: sticky;
             top: 0;
             z-index: 100;
             width: 100%;
@@ -337,7 +338,6 @@
                 transform: translateY(0);
             }
         }
-        /* Responsive hero */
         @media (max-width: 1000px) {
             .hero-grid {
                 flex-direction: column;
@@ -376,7 +376,7 @@
                 height: 120px;
             }
         }
-        /* Services section (enhanced) */
+        /* Services section */
         .services {
             padding: 80px 0;
             background: #fff;
@@ -467,7 +467,6 @@
         .service-link:hover i {
             transform: translateX(4px);
         }
-        /* Stats bar */
         .stats-bar {
             background: #0f3b2c;
             color: white;
@@ -487,7 +486,6 @@
             font-size: 2.8rem;
             font-weight: 800;
         }
-        /* Why Us */
         .why-us {
             padding: 80px 0;
             background: #fefcf5;
@@ -509,7 +507,6 @@
             border-radius: 60px;
             color: #2c7a4d;
         }
-        /* About */
         .about {
             padding: 80px 0;
             background: white;
@@ -541,7 +538,6 @@
             border-radius: 28px;
             box-shadow: 0 12px 24px rgba(0,0,0,0.08);
         }
-        /* Contact Info */
         .contact-info {
             padding: 70px 0;
             background: white;
@@ -559,7 +555,6 @@
         .contact-details { flex: 1; }
         .contact-details h3 { font-size: 1.8rem; margin-bottom: 12px; }
         .contact-cta { flex: 1; text-align: center; }
-        /* Resources */
         .resources {
             padding: 70px 0;
             background: #fafbfc;
@@ -648,9 +643,10 @@
                 <p>PROTECTING HEALTH · SECURING SPACE</p>
             </div>
             <ul class="nav-links">
-                <li><a href="safehome&facilitybiocare.html">Home</a></li>
-                <li><a href="safehome&facilitybiocare.html#about">About Us</a></li>
-                <li><a href="safehome&facilitybiocare.html#services">Services</a></li>
+                <!-- All internal links now point to anchors within this page or to other .html files -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="faq.html">FAQs</a></li>
                 <li><a href="service-areas.html">Service Areas</a></li>
@@ -701,15 +697,11 @@
             </div>
             <div class="hero-image">
                 <div class="hero-image-grid">
+                    <!-- Cleaned up: exactly 4 images to avoid 3 rows -->
                     <img src="https://media.istockphoto.com/id/1253806430/nl/foto/mens-met-beschermende-apparatuur-desinfectie-met-een-nevelpistool-het-restaurant-tijdens-covid.jpg?s=612x612&w=0&k=20&c=48UhitOzWqG7SuiArE7spoZ43FJYmqjmgoQX1vGY6IQ=" alt="Rodent inspection" loading="lazy">
                     <img src="https://media.istockphoto.com/id/1255808818/nl/foto/mens-in-beschermend-kostuum-dat-bank-in-het-openbare-park-ontsmet.jpg?s=612x612&w=0&k=20&c=-ddcUs8ky76ja7rsE6sL_igK9sSNZpleuoQD5QBA8fE=" alt="Traps and control" loading="lazy">
                     <img src="https://media.istockphoto.com/id/1167769498/nl/foto/fogging-om-muggen-te-elimineren-om-verspreide-dengue-koorts-in-de-kamer-te-voorkomen.jpg?s=612x612&w=0&k=20&c=D2mqoNJ1CdIZS_bpVaObBQ3kIYb8P1g9RU9TJWCxpwQ=" alt="Decontamination" loading="lazy">
                     <img src="https://media.istockphoto.com/id/950581364/nl/foto/closeup-muis-zit-in-de-buurt-van-gekauwd-draad-in-de-keuken-van-een-appartement-op-de.jpg?s=612x612&w=0&k=20&c=Fb38AzOt1Y-4-1no5eOgwLsce0QFhu1S9c4yYXDOW_c=" alt="Fogging service" loading="lazy">
-                    <img src="https://media.istockphoto.com/id/2113921209/nl/foto/pest-control-services.jpg?s=612x612&w=0&k=20&c=BVtRV-MvyA9gjW6kJc55MCFxUdN4GnvSujxjW7otDuw=" alt="Decontamination" loading="lazy">
-                    <img src="https://media.istockphoto.com/id/1672906192/nl/foto/chemical-spill-industrial-waste-cleanup-and-environmental-safety.jpg?s=612x612&w=0&k=20&c=OE_mSonXkjlUrDdGvwPOUiyDHU9LnwID2CIfBOJdM5s=" alt="Decontamination" loading="lazy">
-                    
-                
-                
                 </div>
                 <div class="hero-image-overlay">
                     <i class="fas fa-play-circle"></i> See our process
@@ -750,7 +742,8 @@
                     <a href="rodent-inspection.html" class="service-link">Request Inspection <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-bug"></i></div>
+                    <!-- Changed icon to a clear rodent (fa-rat) -->
+                    <div class="service-icon"><i class="fas fa-rat"></i></div>
                     <h3>Rodent Control</h3>
                     <p>Safe trapping, baiting, and removal strategies for complete eradication.</p>
                     <a href="rodent-control.html" class="service-link">Get Control Service <i class="fas fa-arrow-right"></i></a>
