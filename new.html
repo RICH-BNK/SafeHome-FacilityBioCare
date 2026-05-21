@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zuri International Foundation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fef7f4;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .image-section {
+      flex: 1;
+      background: #fde9ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .text-section {
+      flex: 2;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #d43f57;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-section">
+      <img src="data:image/jpeg;base64,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" alt="Supportive mother and child illustration" />
+    </div>
+    <div class="text-section">
+      <h1>Zuri International Foundation</h1>
+      <p>
+        Zuri International Foundation stands as a pillar of hope for teenage mothers who found themselves burdened with parenthood after enduring sexual violence. Many of these young women carry not only children but trauma, isolation, and a lack of family support.
+      </p>
+      <p>
+        Our mission is to walk with them—to provide shelter, healing, education, and love. We believe in second chances, in the strength of young women, and in a future where no survivor walks alone. Through care, community, and empowerment, Zuri helps these mothers and their children rediscover dignity and joy.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <table border="1">
+       <caption>COURSES IN COMPUTING</caption>
+<tr bgcolour="grey">
+    <td>
+        SCHOOL OF COUMPUTING
+    </td>
+</tr>
+<tr bgcolour="lightblue">
+    <TH>S.NO</TH>
+    <TH>CODE</TH>
+    <TH>DEPARTMENT</TH>
+</tr>
+<tr bgcolour="brown">
+    <td>1</td>
+    <td>CIT</td>
+    <td rowspan="5" bgcolour="red">IT</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>DIT</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>DCS</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>BSCCS</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>BIS</td>
+</tr>
+<tr>
+    <td>6</td>
+    <td>CBIT</td>
+    <td rowspan="3" bgcolour="">EC</td>
+</tr>
+<tr>
+    <td>7</td>
+    <td>DBIT</td>
+</tr>
+<tr>
+    <td>8</td>
+    <td>BBIT</td>
+   
+</tr>
+
+
+
+    </table>
+  </div>
+
+</body>
+</html>
